@@ -76,7 +76,7 @@ export async function main(ns) {
 		if (Math.floor(serverRAM / scriptRAM) === Infinity) {
 			return 1
 		} else {
-			ns.tprint(Math.floor(serverRAM / scriptRAM / 3))
+			//ns.tprint(Math.floor(serverRAM / scriptRAM / 3))
 			return Math.floor(serverRAM / scriptRAM / 3)
 		}
 	}
@@ -88,7 +88,7 @@ export async function main(ns) {
 			const hackable = ns.getServerRequiredHackingLevel(server) <= playerHackLevel;
 			const ports = ns.getServerNumPortsRequired(server);
 			const threads = getMaxThreads(server)
-			ns.tprint(server, " has ", threads, " threads available")
+			//ns.tprint(server, " has ", threads, " threads available")
 			if (hacked || (hackable)) {
 				backdoor(server)
 				openPorts(server, ports)
